@@ -76,6 +76,51 @@
         </div>
       </div>
 
+      <div class="container">
+        <h1 class="mt-5">Listado de Usuarios</h1>
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th>Documento</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+              // Conexión a la base de datos
+              include("conexion.php");
+              $mysqli_connect = conexion();
+
+              // Consulta a la base de datos
+              $consulta = "SELECT doc, nom, ape, dir, cel FROM usuarios";
+              $resultados = mysqli_query($conexion, $consulta);
+
+              // Verificar si se obtuvieron resultados
+              if (mysqli_num_rows($resultados) > 0) {
+                  // Mostrar los registros en la tabla
+                  while ($fila = mysqli_fetch_assoc($resultados)) {
+                      echo '<tr>';
+                      echo '<td>' . $fila['doc'] . '</td>';
+                      echo '<td>' . $fila['nom'] . '</td>';
+                      echo '<td>' . $fila['ape'] . '</td>';
+                      echo '<td>' . $fila['dir'] . '</td>';
+                      echo '<td>' . $fila['cel'] . '</td>';
+                      echo '</tr>';
+                  }
+              } else {
+                  echo '<tr><td colspan="5">No se encontraron registros.</td></tr>';
+              }
+
+              // Cerrar la conexión a la base de datos
+              mysqli_close($conexion);
+              ?>
+            </tbody>
+        </table>
+    </div>
+
       <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="row">
           <div class="col-12 col-md">
