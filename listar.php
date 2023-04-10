@@ -2,7 +2,7 @@
 
 // Conexión a la base de datos
 include("conexion.php");
-$mysqli_connect = conexion();
+$con = conexion();
 
 // Consulta a la base de datos
 $consulta = "SELECT documento, nombre, apellido, direccion, celular FROM persona";

@@ -73,7 +73,7 @@
         </div>
       </div>
 
-      <a class="btn btn-primary m-3" href="listar.php" role="button">Link</a>
+      <a class="btn btn-primary m-3" href="listado.php" role="button">Ver Usuarios</a>
 
       <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="row">
