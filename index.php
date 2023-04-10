@@ -74,7 +74,7 @@
       </div>
 
       <form action="listar.php">
-      <input type="submit" class="btn btn-primary m-3" value="Ver Usuarios">
+        <input type="submit" class="btn btn-primary m-3" value="Ver Usuarios">
       </form>
 
       <footer class="pt-4 my-md-5 pt-md-5 border-top">
