@@ -25,13 +25,13 @@
           </thead>
           <tbody class="table-group-divider">
             <?php
-            while($obj=pg_fetch_object($consulta)){ ?>
+            while($obj=pg_query($consulta)){ ?>
                 <tr>
-                    <td><?php echo $obj->documento;?></td>
-                    <td><?php echo $obj->nombre;?></td>
-                    <td><?php echo $obj->apellido;?></td>
-                    <td><?php echo $obj->direccion;?></td>
-                    <td><?php echo $obj->celular;?></td>
+                    <td><?php echo '$documento'?></td>
+                    <td><?php echo '$nombre'?></td>
+                    <td><?php echo '$apellido'?></td>
+                    <td><?php echo '$direccion'?></td>
+                    <td><?php echo '$celular'?></td>
                 </tr>
             </tbody>
             <?php
