@@ -73,7 +73,7 @@
         </div>
       </div>
 
-      <input type="submit" class="btn btn-primary float-right" value="Ver Usuarios" href="listar.php">
+      <a class="btn btn-primary m-3" href="listar.php" role="button">Link</a>
 
       <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="row">
